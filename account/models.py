@@ -15,7 +15,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(_('active'), default=True)
     data_joined = models.DateTimeField(_('data joined'), default=timezone.now)
 
-    # PermissionsMixin
     objects = UserManager()
 
     EMAIL_FIELD = 'email'
